@@ -1,6 +1,13 @@
 server:
   port: 10000
 spring:
+  application:
+    #注意修改服务名
+    name: gulimall-product
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
   datasource:
     username: root
     password: 1234

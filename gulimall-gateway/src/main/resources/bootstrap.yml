@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: gulimall-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        # 改成你自己命名空间id
+        namespace: 1fe0b529-8963-4462-85ba-4b07a95e76a9
