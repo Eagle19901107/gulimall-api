@@ -6,8 +6,13 @@ spring:
     name: gulimall-product
   cloud:
     nacos:
-      discovery:
+      config:
+        file-extension: yaml
+        namespace: 03a2e63d-0034-485f-b96c-98fed6acd0cb
         server-addr: 127.0.0.1:8848
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+
   datasource:
     username: root
     password: 1234

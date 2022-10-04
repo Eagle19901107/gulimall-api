@@ -17,6 +17,14 @@ spring:
           predicates: # 断言规则
             - Query=url,qq         #如果url参数等于baidu 符合断言，转到uri
 
+        #        商品，路径路由
+        - id: product_route
+          uri: lb://gulimall-product
+          predicates:
+            - Path=/api/product/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
         # 路由id，自定义，只要唯一即可
         - id: admin_route
           # uri路由的目标地址。lb就是负载均衡，后面跟服务名称。
